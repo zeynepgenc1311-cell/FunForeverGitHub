@@ -15488,6 +15488,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1967433809}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54dc834f49075df4e8c0ae11065438ba,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1967433810}
   m_SourcePrefab: {fileID: 100100000, guid: 54dc834f49075df4e8c0ae11065438ba, type: 3}
 --- !u!1001 &1212352804
 PrefabInstance:
@@ -23994,14 +23998,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca71a2d2b098354384ff93bbb904431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 4
-  runSpeed: 7
+  walkSpeed: 2
+  runSpeed: 4
   acceleration: 10
   gravity: -9.81
   jumpHeight: 1.2
   rotateWithCameraYaw: 1
   rotationSmoothTime: 0.08
   cameraTransform: {fileID: 1615653961}
+--- !u!136 &1967433810
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967433803}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.01242312
+  m_Height: 0.009302577
+  m_Direction: 1
+  m_Center: {x: -0.000000029809794, y: 0.00027433134, z: -0.0019011244}
 --- !u!1001 &1990037139
 PrefabInstance:
   m_ObjectHideFlags: 0
