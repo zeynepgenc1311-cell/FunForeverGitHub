@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "FunForever.sln"
+    "dotnet.defaultSolution": "FunForeverGitHub.sln"
 }
