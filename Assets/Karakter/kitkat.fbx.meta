@@ -24,7 +24,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -82,7 +82,217 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: kitkat(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Beden
+      parentName: kitkat(Clone)
+      position: {x: -0.00000001888902, y: -0.000000003573162, z: -0.000000004647954}
+      rotation: {x: -0.000000037748947, y: 7.093901e-20, z: 3.5527133e-15, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Kafa
+      parentName: kitkat(Clone)
+      position: {x: -0.000000022124452, y: 1.2414252, z: -0.00000015417062}
+      rotation: {x: -0.000000037748947, y: 7.093901e-20, z: 3.5527133e-15, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: "Sa\xE7\xC7er\xE7evesi"
+      parentName: Kafa
+      position: {x: 0.0000035166715, y: 0.01030985, z: -0.00007406696}
+      rotation: {x: -0.7071068, y: -9.9614156e-20, z: -5.0242966e-15, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "Sa\xE7"
+      parentName: "Sa\xE7\xC7er\xE7evesi"
+      position: {x: -0.0000035164505, y: -0.00007406928, z: -0.022724101}
+      rotation: {x: 0, y: 5.3287647e-27, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rig_Medium
+      parentName: kitkat(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: root
+      parentName: Rig_Medium
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000008146036, y: -0.00000011920927, z: 9.7108296e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hips
+      parentName: root
+      position: {x: -8.018332e-25, y: 0.0040566344, z: 0}
+      rotation: {x: -0, y: 0.00000011920927, z: -1.4e-44, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spine
+      parentName: hips
+      position: {x: 1.2621774e-31, y: 0.0019197749, z: 0}
+      rotation: {x: 1.4210855e-14, y: -7.1054274e-15, z: 2.682219e-22, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: chest
+      parentName: spine
+      position: {x: 2.5243548e-31, y: 0.0037498795, z: 1.7763568e-17}
+      rotation: {x: -1.4210855e-14, y: -0, z: 4.543839e-28, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: upperarm.l
+      parentName: chest
+      position: {x: -0.0021200737, y: 0.0013413233, z: 8.4823226e-10}
+      rotation: {x: -0.5141244, y: 0.4854648, z: 0.48546487, w: 0.51412445}
+      scale: {x: 1.0000021, y: 1.0000021, z: 1.0000013}
+    - name: lowerarm.l
+      parentName: upperarm.l
+      position: {x: 9.220093e-10, y: 0.0024189735, z: 1.8791467e-10}
+      rotation: {x: 0.000000029802322, y: 0.00000010430813, z: 0.055296585, w: 0.99847007}
+      scale: {x: 1.0000017, y: 1.0000025, z: 1.000003}
+    - name: wrist.l
+      parentName: lowerarm.l
+      position: {x: 1.6763806e-10, y: 0.002600439, z: 6.449409e-10}
+      rotation: {x: -0.0000000327795, y: -0.00000010341115, z: -0.026658196, w: 0.9996447}
+      scale: {x: 1.0000021, y: 1.0000011, z: 1.0000011}
+    - name: hand.l
+      parentName: wrist.l
+      position: {x: 2.4680047e-10, y: 0.0007382594, z: 0.0000000013271346}
+      rotation: {x: -0, y: -0, z: -3.3897655e-15, w: 1}
+      scale: {x: 0.9999999, y: 1.0000004, z: 1.0000002}
+    - name: handslot.l
+      parentName: hand.l
+      position: {x: -7.4505804e-11, y: 0.00096125243, z: -0.0005749994}
+      rotation: {x: 0.00000006402354, y: 0.00000014349676, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1.0000032, y: 1.0000014, z: 1.0000018}
+    - name: handslot.l_end
+      parentName: handslot.l
+      position: {x: -0, y: 0.0011201027, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: upperarm.r
+      parentName: chest
+      position: {x: 0.0021200737, y: 0.0013413233, z: 8.4823226e-10}
+      rotation: {x: -0.5141244, y: -0.4854648, z: -0.4854649, w: 0.51412445}
+      scale: {x: 1.0000004, y: 1.0000008, z: 1.0000006}
+    - name: lowerarm.r
+      parentName: upperarm.r
+      position: {x: 4.6566128e-12, y: 0.0024189742, z: -1.8975697e-10}
+      rotation: {x: -0.000000029802322, y: 0.00000011920929, z: 0.05529657, w: -0.99847007}
+      scale: {x: 1.0000012, y: 1.0000008, z: 1.000002}
+    - name: wrist.r
+      parentName: lowerarm.r
+      position: {x: -1.8626451e-11, y: 0.0026004391, z: 6.0535965e-10}
+      rotation: {x: 0.000000002625853, y: -0.0000001050758, z: -0.026658196, w: -0.9996447}
+      scale: {x: 1.000001, y: 1.0000005, z: 1.0000008}
+    - name: hand.r
+      parentName: wrist.r
+      position: {x: -7.4505804e-11, y: 0.0007382589, z: 8.9639796e-10}
+      rotation: {x: 2.2204455e-16, y: -0, z: 2.759136e-16, w: 1}
+      scale: {x: 0.9999999, y: 0.9999996, z: 0.9999993}
+    - name: handslot.r
+      parentName: hand.r
+      position: {x: 5.5879353e-11, y: 0.0009612525, z: -0.00057499943}
+      rotation: {x: -0.00000006220549, y: 0.00000015167882, z: 0.7071068, w: -0.7071068}
+      scale: {x: 1.000002, y: 0.9999999, z: 1.0000006}
+    - name: handslot.r_end
+      parentName: handslot.r
+      position: {x: -0, y: 0.0011201027, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head
+      parentName: chest
+      position: {x: -5.0487097e-31, y: 0.0026879662, z: 3.5527136e-17}
+      rotation: {x: 2.842171e-14, y: -7.17e-43, z: -8.582807e-28, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head_end
+      parentName: head
+      position: {x: -0, y: 0.002568493, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: upperleg.l
+      parentName: hips
+      position: {x: -0.0017094506, y: 0.0011358726, z: 1.3794547e-10}
+      rotation: {x: 0.9998491, y: 0.0000000669692, z: 0.00000007698657, w: 0.017373955}
+      scale: {x: 1, y: 1, z: 1.0000011}
+    - name: lowerleg.l
+      parentName: upperleg.l
+      position: {x: -2.7170488e-11, y: 0.0022707745, z: -8.155827e-12}
+      rotation: {x: 0.10622713, y: -0.0000006291737, z: 0.00000006403251, w: 0.99434197}
+      scale: {x: 1, y: 1.0000023, z: 1.0000018}
+    - name: foot.l
+      parentName: lowerleg.l
+      position: {x: 8.607477e-11, y: 0.0014943706, z: -7.8543395e-13}
+      rotation: {x: -0.45524004, y: 0.00000027968363, z: 0.00000022967868, w: 0.89036876}
+      scale: {x: 1, y: 1.0000104, z: 1.0000044}
+    - name: toes.l
+      parentName: foot.l
+      position: {x: 1.1851875e-10, y: 0.0016565005, z: -3.0088713e-11}
+      rotation: {x: -0.0000001695808, y: 0.9203549, z: -0.39108437, w: -0.00000039862968}
+      scale: {x: 1.0000038, y: 0.9999948, z: 1.0000076}
+    - name: toes.l_end
+      parentName: toes.l
+      position: {x: -0, y: 0.0016565009, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: upperleg.r
+      parentName: hips
+      position: {x: 0.0017094506, y: 0.0011358726, z: 1.3794547e-10}
+      rotation: {x: 0.9998491, y: -0.000000066969186, z: -0.00000007698656, w: 0.017373955}
+      scale: {x: 1, y: 1, z: 1.0000011}
+    - name: lowerleg.r
+      parentName: upperleg.r
+      position: {x: 2.1354881e-11, y: 0.0022707745, z: -7.7226845e-12}
+      rotation: {x: 0.106227115, y: 0.0000006291737, z: -0.0000000640325, w: 0.99434197}
+      scale: {x: 1, y: 1.0000027, z: 1.0000018}
+    - name: foot.r
+      parentName: lowerleg.r
+      position: {x: 4.0326176e-11, y: 0.0014943704, z: -5.6933513e-11}
+      rotation: {x: -0.45524, y: -0.00000027968372, z: -0.00000022967863, w: 0.89036876}
+      scale: {x: 1, y: 1.0000098, z: 1.0000035}
+    - name: toes.r
+      parentName: foot.r
+      position: {x: -7.711445e-11, y: 0.0016565004, z: 8.204494e-12}
+      rotation: {x: 0.00000016958077, y: 0.92035484, z: -0.3910844, w: 0.00000039862962}
+      scale: {x: 1.0000049, y: 0.99999684, z: 1.0000073}
+    - name: toes.r_end
+      parentName: toes.r
+      position: {x: -0, y: 0.0016565009, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "Sa\u011FBacak"
+      parentName: kitkat(Clone)
+      position: {x: -0.00000001888902, y: -0.000000003573162, z: -0.000000004647954}
+      rotation: {x: -0.000000037748947, y: 7.093901e-20, z: 3.5527133e-15, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: "Sa\u011FKol"
+      parentName: kitkat(Clone)
+      position: {x: -0.00000001888902, y: -0.000000003573162, z: -0.000000004647954}
+      rotation: {x: -0.000000037748947, y: 7.093901e-20, z: 3.5527133e-15, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: "Sa\u011FTerlik"
+      parentName: kitkat(Clone)
+      position: {x: 0.17134504, y: -0.0012818724, z: 0.09781526}
+      rotation: {x: -0.001687175, y: -0.00000016866161, z: 0.99999857, w: -0.000000043995765}
+      scale: {x: 246.57669, y: 320.47043, z: 158.70912}
+    - name: SolBacak
+      parentName: kitkat(Clone)
+      position: {x: -0.00000001888902, y: -0.000000003573162, z: -0.000000004647954}
+      rotation: {x: -0.000000037748947, y: 7.093901e-20, z: 3.5527133e-15, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: SolKol
+      parentName: kitkat(Clone)
+      position: {x: -0.00000001888902, y: -0.000000003573162, z: -0.000000004647954}
+      rotation: {x: -0.000000037748947, y: 7.093901e-20, z: 3.5527133e-15, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: SolTerlik
+      parentName: kitkat(Clone)
+      position: {x: -0.16440128, y: -0.0012818724, z: 0.0969914}
+      rotation: {x: -0.001687175, y: -0.00000016866161, z: 0.99999857, w: -0.000000043995765}
+      scale: {x: 246.57669, y: 320.47043, z: 158.70912}
+    - name: "ti\u015F\xF6rt"
+      parentName: kitkat(Clone)
+      position: {x: -0.00080976635, y: 0.49111927, z: 0.03207154}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 269.02225, y: 223.5471, z: 201.57658}
+    - name: "\u015Fort"
+      parentName: kitkat(Clone)
+      position: {x: -0.006623275, y: 0.49271378, z: 0.040008157}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 174.54321, y: 158.24779, z: 108.4124}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -93,13 +303,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
