@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Ground Check")]
     public LayerMask groundLayer;
-    public float groundCheckDistance = 0.1f;
+    public float groundCheckDistance = 0.2f;
 
     private Rigidbody rb;
     private CapsuleCollider capsule;
@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
         capsule = GetComponent<CapsuleCollider>();
 
         rb.freezeRotation = true;
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
         if (userInventory != null)
             userInventory.SetActive(false);
@@ -56,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
         rotX -= mouseY;
-        rotX = Mathf.Clamp(rotX, -45f, 45f);
+        rotX = Mathf.Clamp(rotX, -45f, 60f);
 
         if (cameraTransform != null)
             cameraTransform.localRotation = Quaternion.Euler(rotX, 0, 0);
@@ -71,21 +73,20 @@ public class PlayerMovement : MonoBehaviour
         // Zıplama
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z); // Y sıfırla
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 
     void FixedUpdate()
     {
-        // Rigidbody ile hareket
+        // Smooth movement
         Vector3 targetVelocity = moveInput * movementSpeed;
-        rb.velocity = new Vector3(targetVelocity.x, rb.velocity.y, targetVelocity.z);
+        Vector3 velocity = Vector3.Lerp(rb.velocity, new Vector3(targetVelocity.x, rb.velocity.y, targetVelocity.z), 0.2f);
+        rb.velocity = velocity;
     }
 
     bool IsGrounded()
     {
-        // CapsuleCollider tabanına göre raycast ground check
         Vector3 origin = transform.position + Vector3.up * 0.1f;
         float distance = capsule.bounds.extents.y + groundCheckDistance;
         return Physics.Raycast(origin, Vector3.down, distance, groundLayer);
