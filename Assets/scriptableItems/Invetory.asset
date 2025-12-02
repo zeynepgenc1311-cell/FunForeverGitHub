@@ -14,6 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventorySlots:
   - isFull: 0
+    itemCount: 1
+    item: {fileID: 11400000, guid: ac2680ca57c660849bdc6fb3b03a4259, type: 2}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
     itemCount: 0
     item: {fileID: 0}
   - isFull: 0
