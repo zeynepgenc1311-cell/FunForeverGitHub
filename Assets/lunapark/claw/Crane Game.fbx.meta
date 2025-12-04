@@ -3,7 +3,17 @@ guid: f7a921437ddc0344fa9baeaba3713987
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Crane game
+    second: {fileID: 2100000, guid: 1e9bcc832e52a1445be31321b091b56e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stuffed bear
+    second: {fileID: 2100000, guid: 4e4e687ec47c2df4c8053fae886383c3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
