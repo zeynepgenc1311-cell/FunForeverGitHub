@@ -3,7 +3,27 @@ guid: 6ab09e0acbe088649ba79812734012cc
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Alarm
+    second: {fileID: 2100000, guid: 52972153b80f4cb47b13ca53abe78172, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ColorDark
+    second: {fileID: 2100000, guid: b1f2242d17e5b0d47a5642fd18a0ee06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Colors
+    second: {fileID: 2100000, guid: 39b752c5fe35c9c4f931dcc07686796f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windows
+    second: {fileID: 2100000, guid: b4634b6d44da6654fa23113b734c1dd8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
