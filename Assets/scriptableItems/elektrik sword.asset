@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: sword elektrik
   itemDescription: "sava\u015F"
   canStackable: 0
-  itemIcon: {fileID: 21300000, guid: 74b11a7682cb8c74b87054a174fd5fe0, type: 3}
+  itemIcon: {fileID: 21300000, guid: 922352bf09e038c409aef2577d97a734, type: 3}
   itemPrefab: {fileID: 919132149155446097, guid: 9c815486f5d61084390dee830f7e3fcb,
     type: 3}
   damage: 0
