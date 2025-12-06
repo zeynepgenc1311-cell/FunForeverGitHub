@@ -134,6 +134,97 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1215650698}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &10893564
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -165.32622
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0015864372
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 153.00125
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a32bdb5e2280a9d4eb7022771bc8c2d3,
+        type: 3}
+      propertyPath: m_Name
+      value: BusinessBuildingsPackC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 4960902423974283952, guid: a32bdb5e2280a9d4eb7022771bc8c2d3, type: 3}
+    - {fileID: 4989322464871410650, guid: a32bdb5e2280a9d4eb7022771bc8c2d3, type: 3}
+    - {fileID: 1128871262150119563, guid: a32bdb5e2280a9d4eb7022771bc8c2d3, type: 3}
+    - {fileID: 9094959604933161066, guid: a32bdb5e2280a9d4eb7022771bc8c2d3, type: 3}
+    - {fileID: 8457836465750771714, guid: a32bdb5e2280a9d4eb7022771bc8c2d3, type: 3}
+    - {fileID: 2378277240331865978, guid: a32bdb5e2280a9d4eb7022771bc8c2d3, type: 3}
+    - {fileID: 5435952178694620956, guid: a32bdb5e2280a9d4eb7022771bc8c2d3, type: 3}
+    - {fileID: -1744267493648736590, guid: a32bdb5e2280a9d4eb7022771bc8c2d3, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a32bdb5e2280a9d4eb7022771bc8c2d3, type: 3}
 --- !u!1001 &14221800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32142,3 +32233,4 @@ SceneRoots:
   - {fileID: 600057236}
   - {fileID: 1816430268}
   - {fileID: 893291854}
+  - {fileID: 10893564}
