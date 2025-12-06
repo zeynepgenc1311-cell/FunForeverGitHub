@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bd3de1dc322496440a6461253466f8b5
+guid: 06253e08fe5c6044ca4b7d388c77b5ae
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material_0.001
-    second: {fileID: 2100000, guid: 9571a9e9822726f48b34fbe58675aaa0, type: 2}
+      name: Cat_LPMat
+    second: {fileID: 2100000, guid: ef7afe926cad7d9429141ea702e6e9b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlateauMat
+    second: {fileID: 2100000, guid: ba593b48e5bd05b47b1c643b9d088b0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Whiskers2_EyesMat
+    second: {fileID: 2100000, guid: 4b58a26e0f1f46e419ef16e4caffa25a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Whiskers2_WhiskersMat
+    second: {fileID: 2100000, guid: 7fee247252914ee4993e9ed8c9801ca8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
