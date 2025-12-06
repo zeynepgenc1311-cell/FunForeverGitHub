@@ -1844,6 +1844,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cafe
       objectReference: {fileID: 0}
+    - target: {fileID: 2093049196647932237, guid: 256b29fbb412d744e8c118b8a7da3b38,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8185218071934380454, guid: 256b29fbb412d744e8c118b8a7da3b38,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -15593,6 +15598,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1701124190}
     m_Modifications:
+    - target: {fileID: 4823947756763768052, guid: 68f368dd793b3f04b9e81fc06c711c2c,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5960855168113024923, guid: 68f368dd793b3f04b9e81fc06c711c2c,
         type: 3}
       propertyPath: m_LocalScale.x
