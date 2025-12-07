@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Item item;
+    public Button button;
+
+    private void Start()
     {
-        
+        button.onClick.AddListener(OnClickSlot);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnClickSlot()
     {
-        
+        if(item != null)
+        {
+            // FishSellPanel’e ekle
+            FishSellPanel.Instance.AddFish(item, item.price);
+        }
     }
 }
