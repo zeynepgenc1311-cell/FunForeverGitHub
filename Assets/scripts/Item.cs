@@ -8,5 +8,6 @@ public class Item : MonoBehaviour
     public ItemType itemType;
     // Item.cs içinde
     public Sprite icon;
+    public int price;
 
 }

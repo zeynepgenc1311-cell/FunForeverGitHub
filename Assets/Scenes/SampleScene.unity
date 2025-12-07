@@ -799,6 +799,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 048b7fa2771fe2e438422905430f274e, type: 2}
   itemType: 0
   icon: {fileID: 0}
+  price: 0
 --- !u!4 &23838115 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d1dbaad8388db3746ad5cac74bc494d4,
@@ -4657,6 +4658,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: a8cb5b21a8d88a34cb91c31980570966, type: 2}
   itemType: 0
   icon: {fileID: 0}
+  price: 0
 --- !u!65 &367385291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6135,6 +6137,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 0a971200f1685874a9fbb82486ef664c, type: 2}
   itemType: 0
   icon: {fileID: 0}
+  price: 0
 --- !u!4 &477393103 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 97a8b82f3d87b034caeb16764385b8bf,
@@ -10318,6 +10321,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 6c8f80cc7639d5148a70cfba7c7f86dc, type: 2}
   itemType: 0
   icon: {fileID: 0}
+  price: 0
 --- !u!4 &802917667 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2154354207369984758, guid: b9bc277a739c12644a282eff19931272,
@@ -19048,7 +19052,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1423248274
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24799,6 +24803,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 3895036ec8a90de4f8f125b74ae6194c, type: 2}
   itemType: 0
   icon: {fileID: 0}
+  price: 0
 --- !u!4 &1816430272 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9c815486f5d61084390dee830f7e3fcb,
@@ -25023,6 +25028,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 955ed47d1c1250943a10f099d418b310, type: 2}
   itemType: 1
   icon: {fileID: 0}
+  price: 0
 --- !u!65 &1837972872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28743,6 +28749,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: e17ba154ecb5ce6499e97e85ae946707, type: 2}
   itemType: 1
   icon: {fileID: 0}
+  price: 0
 --- !u!65 &2094396050
 BoxCollider:
   m_ObjectHideFlags: 0
