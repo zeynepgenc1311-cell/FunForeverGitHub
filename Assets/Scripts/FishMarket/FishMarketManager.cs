@@ -1,19 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
+using InventorySystem;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FishMarketManager : MonoBehaviour
 {
     [SerializeField] private GameObject sellContent;
     [SerializeField] private List<SCItem> sellItems = new();
     [SerializeField] private FishSlot FishSlotPrefab;
+    [SerializeField] private TextMeshProUGUI CoinText;
+
+    public int CoinPanel = 0;
+
 
     private void Start()
     {
         SellFillSlots();
+        CoinText.text = CoinPanel.ToString(); 
     }
 
+    public FishMarketState currentState = FishMarketState.Sell;
 
+    public void MarketRequest(SCItem item, int amount)
+    {
+        switch (currentState)
+        {
+            case FishMarketState.Sell:
+            bool condition = Inventory.Instance.RemoveItem(item, amount);
+            if (condition)
+            {
+                CoinPanel += item.itemPrice;
+                CoinText.text = CoinPanel.ToString(); 
+            }
+            else Debug.Log("item sende yok satılmadı");
+            break;
+        }
+    }
 
 
     public void SellFillSlots()
@@ -25,7 +49,23 @@ public class FishMarketManager : MonoBehaviour
             slot.Initialize(item);
         }
     }
+    
+    public static FishMarketManager Instance;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
+
 
 public enum FishMarketState
 {

@@ -12,6 +12,36 @@ public class Inventory : MonoBehaviour
     int tempIndex;
     Slot tempSlot;
 
+    public static Inventory Instance;
+
+private void Awake()
+{
+    Instance = this;
+}
+
+public bool RemoveItem(SCItem item, int amount)
+{
+    for (int i = 0; i < playerInventory.inventorySlots.Count; i++)
+    {
+        if (playerInventory.inventorySlots[i].item == item)
+        {
+            playerInventory.inventorySlots[i].itemCount -= amount;
+
+            if (playerInventory.inventorySlots[i].itemCount <= 0)
+            {
+                playerInventory.inventorySlots[i].itemCount = 0;
+                playerInventory.inventorySlots[i].item = null;
+            }
+
+            inventoryUI.UpdateUI();
+            return true;
+        }
+    }
+
+    return false;
+}
+
+
     private void Start()
     {
         inventoryUI = GetComponent<InventoryUIController>();

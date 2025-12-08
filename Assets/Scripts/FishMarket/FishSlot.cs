@@ -16,7 +16,7 @@ public class FishSlot : MonoBehaviour
     {
         slotButton.onClick.AddListener(() =>
         {
-            
+            FishMarketManager.Instance.MarketRequest(currentItem, 1);
         });
         Initialize(currentItem);
     }
