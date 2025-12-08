@@ -6,8 +6,10 @@ public class Item : MonoBehaviour
 {
     public SCItem item;
     public ItemType itemType;
+
     // Item.cs içinde
     public Sprite icon;
     public int price;
-
+    public int itemPrice = 1;
+    public Sprite itemSprite;
 }

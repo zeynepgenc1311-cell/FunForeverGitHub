@@ -11,59 +11,67 @@ public class Inventory : MonoBehaviour
     bool isSwapping;
     int tempIndex;
     Slot tempSlot;
+
     private void Start()
     {
-        inventoryUI=gameObject.GetComponent<InventoryUIController>();
+        inventoryUI = GetComponent<InventoryUIController>();
         inventoryUI.UpdateUI();
-
     }
+
     public void CurrentItem(int index)
     {
-        if (playerInventory.inventorySlots[index].item)
+        if (playerInventory.inventorySlots[index].item != null)
         {
             playerAction.SetItem(playerInventory.inventorySlots[index].item.itemPrefab);
         }
     }
+
     public void DeleteItem()
     {
-        if (isSwapping == true)
+        if (isSwapping)
         {
             playerInventory.DeleteItem(tempIndex);
             isSwapping = false;
             inventoryUI.UpdateUI();
         }
     }
+
     public void DropItem()
     {
-        if(isSwapping == true)
+        if (isSwapping)
         {
-            playerInventory.DropItem(tempIndex, gameObject.transform.position + Vector3.forward);
-            isSwapping =false;
+            playerInventory.DropItem(tempIndex, transform.position + Vector3.forward);
+            isSwapping = false;
             inventoryUI.UpdateUI();
         }
     }
+
     public void SwapItem(int index)
     {
-        if (isSwapping == false)
+        if (!isSwapping)
         {
             tempIndex = index;
             tempSlot = playerInventory.inventorySlots[tempIndex];
             isSwapping = true;
         }
-        else if (isSwapping == true)
+        else
         {
-            playerInventory.inventorySlots[tempIndex]=playerInventory.inventorySlots[index];
+            playerInventory.inventorySlots[tempIndex] = playerInventory.inventorySlots[index];
             playerInventory.inventorySlots[index] = tempSlot;
             isSwapping = false;
         }
+
         inventoryUI.UpdateUI();
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Item"))
+        if (other.CompareTag("Item"))
         {
-            if (playerInventory.AddItem(other.gameObject.GetComponent<Item>().item))
+            Item worldItem = other.GetComponent<Item>();
+            if (worldItem == null) return;
+
+            if (playerInventory.AddItem(worldItem.item))
             {
                 Destroy(other.gameObject);
                 inventoryUI.UpdateUI();

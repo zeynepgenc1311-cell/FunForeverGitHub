@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109b996d64f139245a3e8ef13fc93068, type: 3}
+  m_Name: ROD
+  m_EditorClassIdentifier: 
+  itemName: ROD
+  itemIcon: {fileID: 21300000, guid: bcb44df229fa52244a1f2d4d1a4a6dd0, type: 3}
+  itemSprite: {fileID: 21300000, guid: bcb44df229fa52244a1f2d4d1a4a6dd0, type: 3}
+  price: 99
+  canStackable: 0
+  itemPrefab: {fileID: 8170873687928919947, guid: be07be3e2a2d5e2408ed79b16b1dce07,
+    type: 3}

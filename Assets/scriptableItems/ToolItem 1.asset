@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d5cd5ff922f3b04fa43e95cf9319b0e, type: 3}
-  m_Name: elektrik sword
+  m_Name: ToolItem 1
   m_EditorClassIdentifier: 
-  itemName: sword elektrik
-  itemIcon: {fileID: 21300000, guid: 922352bf09e038c409aef2577d97a734, type: 3}
-  itemSprite: {fileID: 0}
-  price: 52
+  itemName: 
+  itemDescription: 
   canStackable: 0
-  itemPrefab: {fileID: 919132149155446097, guid: 9c815486f5d61084390dee830f7e3fcb,
-    type: 3}
+  itemIcon: {fileID: 0}
+  itemPrefab: {fileID: 0}
   damage: 0
