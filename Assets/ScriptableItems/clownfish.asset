@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: clownfish
   m_EditorClassIdentifier: 
   itemName: Clownfish
-  itemDescription: "Sat\u0131labilir"
-  canStackable: 1
   itemIcon: {fileID: 21300000, guid: 4a475b99e6136d742b991ac6bee8c8b4, type: 3}
+  itemSprite: {fileID: 21300000, guid: 4a475b99e6136d742b991ac6bee8c8b4, type: 3}
+  price: 0
+  canStackable: 1
+  itemPrice: 25
   itemPrefab: {fileID: 919132149155446097, guid: bc8b63271d7ebdf47b3486dbd560dea5,
     type: 3}
   damage: 0

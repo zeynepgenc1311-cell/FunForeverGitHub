@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public SCInventory playerInventory;
+    public SCInventory playerInventory; // SCInventory, SCItem listesi içeriyor
     public PlayerActions playerAction;
     InventoryUIController inventoryUI;
 
@@ -18,11 +18,13 @@ public class Inventory : MonoBehaviour
         inventoryUI.UpdateUI();
     }
 
+    // Burada artık itemPrefab değil SCItem gönderiyoruz
     public void CurrentItem(int index)
     {
-        if (playerInventory.inventorySlots[index].item != null)
+        SCItem item = playerInventory.inventorySlots[index].item; // SCItem
+        if (item != null)
         {
-            playerAction.SetItem(playerInventory.inventorySlots[index].item.itemPrefab);
+            playerAction.SetItem(item); // ❌ artık prefab değil, SCItem asset
         }
     }
 
