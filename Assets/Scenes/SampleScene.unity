@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6666b8e6f645348927c0c3389b65dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 048b7fa2771fe2e438422905430f274e, type: 2}
   itemType: 0
   icon: {fileID: 0}
   price: 0
@@ -4657,7 +4657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6666b8e6f645348927c0c3389b65dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: a8cb5b21a8d88a34cb91c31980570966, type: 2}
   itemType: 0
   icon: {fileID: 0}
   price: 0
@@ -6138,7 +6138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6666b8e6f645348927c0c3389b65dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 0a971200f1685874a9fbb82486ef664c, type: 2}
   itemType: 0
   icon: {fileID: 0}
   price: 0
@@ -10325,7 +10325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6666b8e6f645348927c0c3389b65dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 6c8f80cc7639d5148a70cfba7c7f86dc, type: 2}
   itemType: 0
   icon: {fileID: 0}
   price: 0
@@ -24718,7 +24718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6666b8e6f645348927c0c3389b65dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 3895036ec8a90de4f8f125b74ae6194c, type: 2}
   itemType: 0
   icon: {fileID: 0}
   price: 0
@@ -24945,7 +24945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6666b8e6f645348927c0c3389b65dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 955ed47d1c1250943a10f099d418b310, type: 2}
   itemType: 0
   icon: {fileID: 0}
   price: 0
@@ -28662,7 +28662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6666b8e6f645348927c0c3389b65dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: e17ba154ecb5ce6499e97e85ae946707, type: 2}
   itemType: 0
   icon: {fileID: 0}
   price: 0
