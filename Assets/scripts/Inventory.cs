@@ -41,6 +41,46 @@ public bool RemoveItem(SCItem item, int amount)
     return false;
 }
 
+public bool AddItem(SCItem item, int amount = 1)
+{
+    // Önce stacklenebilir ve envanterde aynı item varsa ona ekleyelim
+    for (int i = 0; i < playerInventory.inventorySlots.Count; i++)
+    {
+        Slot slot = playerInventory.inventorySlots[i];
+
+        // Slot dolu ve aynı item ise
+        if (slot.item == item)
+        {
+            // Eğer stacklenebilir ise ekle
+            if (item.canStackable)
+            {
+                slot.itemCount += amount;
+                inventoryUI.UpdateUI();
+                return true;
+            }
+        }
+    }
+
+    // Eğer stack mevcut değilse, boş slot bulup item yerleştir
+    for (int i = 0; i < playerInventory.inventorySlots.Count; i++)
+    {
+        Slot slot = playerInventory.inventorySlots[i];
+
+        if (slot.item == null)
+        {
+            slot.item = item;
+            slot.itemCount = amount;
+            inventoryUI.UpdateUI();
+            return true;
+        }
+    }
+
+    // Hiç boş slot yoksa
+    Debug.Log("ENVANTER DOLU! Item eklenemedi.");
+    return false;
+}
+
+
 
     private void Start()
     {

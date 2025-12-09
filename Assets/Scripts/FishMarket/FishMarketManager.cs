@@ -31,8 +31,7 @@ public class FishMarketManager : MonoBehaviour
             bool condition = Inventory.Instance.RemoveItem(item, amount);
             if (condition)
             {
-                CoinPanel += item.itemPrice;
-                CoinText.text = CoinPanel.ToString(); 
+                CurrencyManager.Instance.AddCoins(item.itemPrice);
             }
             else Debug.Log("item sende yok satılmadı");
             break;
@@ -66,7 +65,7 @@ public class FishMarketManager : MonoBehaviour
 
 }
 
-
+[System.Serializable]
 public enum FishMarketState
 {
     Sell
