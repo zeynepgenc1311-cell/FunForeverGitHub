@@ -178,8 +178,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 35e5f964607659a429878a73d7475e90, type: 2}
   RodSlotPrefab: {fileID: 5566930119541451385, guid: 79f0bdf39661a4d44a21c8075250b083,
     type: 3}
-  CoinText: {fileID: 1650734343}
-  CoinPanel: 500
   currentState: 0
 --- !u!4 &10452168 stripped
 Transform:
@@ -2941,6 +2939,7 @@ MonoBehaviour:
   gems: 500
   coinText: {fileID: 1650734343}
   gemText: {fileID: 908171238}
+  resetOnStart: 0
 --- !u!1001 &210188610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14118,8 +14117,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e17ba154ecb5ce6499e97e85ae946707, type: 2}
   FishSlotPrefab: {fileID: -7797004671955688128, guid: ac0b8717bdccadc4f9b66fda312fa795,
     type: 3}
-  CoinText: {fileID: 1650734343}
-  CoinPanel: 500
   currentState: 0
 --- !u!4 &1019814242
 Transform:

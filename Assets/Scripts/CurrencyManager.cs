@@ -12,6 +12,8 @@ public class CurrencyManager : MonoBehaviour
     [Header("UI")]
     public TMP_Text coinText;
     public TMP_Text gemText;
+    public bool resetOnStart = false;
+
 
     void Awake()
 {
@@ -25,6 +27,15 @@ public class CurrencyManager : MonoBehaviour
 
     coins = PlayerPrefs.GetInt("coins");
     gems = PlayerPrefs.GetInt("gems");
+
+    if (resetOnStart)
+{
+    PlayerPrefs.DeleteKey("coins");
+    PlayerPrefs.DeleteKey("gems");
+    PlayerPrefs.Save();
+    Debug.Log("PlayerPrefs sıfırlandı.");
+}
+
 }
 
 

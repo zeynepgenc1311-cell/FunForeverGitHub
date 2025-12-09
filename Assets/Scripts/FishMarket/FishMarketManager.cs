@@ -10,15 +10,12 @@ public class FishMarketManager : MonoBehaviour
     [SerializeField] private GameObject sellContent;
     [SerializeField] private List<SCItem> sellItems = new();
     [SerializeField] private FishSlot FishSlotPrefab;
-    [SerializeField] private TextMeshProUGUI CoinText;
-
-    public int CoinPanel = 0;
+    
 
 
     private void Start()
     {
-        SellFillSlots();
-        CoinText.text = CoinPanel.ToString(); 
+        SellFillSlots(); 
     }
 
     public FishMarketState currentState = FishMarketState.Sell;

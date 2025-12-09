@@ -10,15 +10,12 @@ public class RodMarketManager : MonoBehaviour
     [SerializeField] private GameObject buyContent;
     [SerializeField] private List<SCItem> buyItems = new();
     [SerializeField] private RodSlot RodSlotPrefab;
-    [SerializeField] private TextMeshProUGUI CoinText;
-
-    public int CoinPanel = 0;
+    
 
 
     private void Start()
     {
         BuyFillSlots();
-        CoinText.text = CoinPanel.ToString(); 
     }
 
     public RodMarketState currentState = RodMarketState.Buy;
