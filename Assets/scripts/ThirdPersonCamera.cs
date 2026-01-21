@@ -2,35 +2,39 @@ using UnityEngine;
 
 public class ThirdPersonCamera : MonoBehaviour
 {
-    public Transform target;           // Player transform
-    public Vector3 offset = new Vector3(0, 3, -5); // Kamera konumu player’a göre
-    public float rotationSpeed = 5f;   // Mouse ile dönüş hızı
-    public float followSpeed = 10f;    // Kamera yumuşak takip hızı
+    public Transform target; // Player
+    public Vector3 offset = new Vector3(0, 3, -5);
 
-    private float rotX = 0f;
+    public float mouseSensitivity = 3f;
+    public float followSpeed = 10f;
+
+    public float minY = -35f;
+    public float maxY = 60f;
+
+    private float rotX;
+    private float rotY;
 
     void LateUpdate()
     {
-        if (target == null) return;
+        if (!target) return;
 
-        // Mouse input
-        float mouseX = Input.GetAxis("Mouse X") * rotationSpeed;
-        float mouseY = Input.GetAxis("Mouse Y") * rotationSpeed;
+        float mouseX = Input.GetAxisRaw("Mouse X") * mouseSensitivity;
+        float mouseY = Input.GetAxisRaw("Mouse Y") * mouseSensitivity;
 
-        // Kamera dikey rotasyonu
+        rotY += mouseX;
         rotX -= mouseY;
-        rotX = Mathf.Clamp(rotX, -35f, 60f); // Third person için uygun açılar
+        rotX = Mathf.Clamp(rotX, minY, maxY);
 
-        // Kamerayı yatay döndür (player etrafında)
-        target.Rotate(Vector3.up * mouseX);
+        Quaternion rotation = Quaternion.Euler(rotX, rotY, 0f);
 
-        // Hedef pozisyonu hesapla
-        Vector3 desiredPosition = target.position + target.rotation * offset;
+        Vector3 desiredPosition = target.position + rotation * offset;
 
-        // Kamera yumuşak şekilde hareket etsin
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
+        transform.position = Vector3.Lerp(
+            transform.position,
+            desiredPosition,
+            followSpeed * Time.deltaTime
+        );
 
-        // Kamera her zaman player’a baksın
-        transform.LookAt(target.position + Vector3.up * 1.5f); // Player yüksekliğine bak
+        transform.LookAt(target.position + Vector3.up * 1.5f);
     }
 }

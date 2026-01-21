@@ -7,14 +7,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     public float movementSpeed = 5f;
     public float jumpForce = 7f;
+    public float rotationSmooth = 10f;
 
-    [Header("Camera")]
-    public Transform cameraTransform;
-    public float mouseSensitivity = 150f;
-
-    [Header("Inventory")]
-    public GameObject userInventory;
-    private bool isInventoryOpen = false;
+    [Header("Camera Reference")]
+    public Transform cameraTransform; // Main Camera
 
     [Header("Ground Check")]
     public LayerMask groundLayer;
@@ -23,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private CapsuleCollider capsule;
     private Vector3 moveInput;
-    private float rotX = 0f;
 
     void Start()
     {
@@ -32,45 +27,40 @@ public class PlayerMovement : MonoBehaviour
 
         rb.freezeRotation = true;
         rb.interpolation = RigidbodyInterpolation.Interpolate;
-        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
-        if (userInventory != null)
-            userInventory.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
     {
-        // Inventory aç/kapa
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            isInventoryOpen = !isInventoryOpen;
-            userInventory.SetActive(isInventoryOpen);
-        }
-
-        if (isInventoryOpen)
-        {
-            moveInput = Vector3.zero;
-            return;
-        }
-
-        // Kamera dönüşü (third person)
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
-        rotX -= mouseY;
-        rotX = Mathf.Clamp(rotX, -45f, 60f);
-
-        if (cameraTransform != null)
-            cameraTransform.localRotation = Quaternion.Euler(rotX, 0, 0);
-
-        transform.Rotate(Vector3.up * mouseX);
-
-        // Hareket input
+        // Input
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
-        moveInput = (transform.forward * v + transform.right * h).normalized;
 
-        // Zıplama
+        // Kameraya göre yön
+        Vector3 camForward = cameraTransform.forward;
+        camForward.y = 0f;
+        camForward.Normalize();
+
+        Vector3 camRight = cameraTransform.right;
+        camRight.y = 0f;
+        camRight.Normalize();
+
+        moveInput = (camForward * v + camRight * h).normalized;
+
+        // Player kameraya doğru dönsün (SADECE YATAY)
+        if (moveInput.magnitude > 0.1f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(moveInput);
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                targetRotation,
+                rotationSmooth * Time.deltaTime
+            );
+        }
+
+        // Jump
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -79,10 +69,12 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Smooth movement
         Vector3 targetVelocity = moveInput * movementSpeed;
-        Vector3 velocity = Vector3.Lerp(rb.velocity, new Vector3(targetVelocity.x, rb.velocity.y, targetVelocity.z), 0.2f);
-        rb.velocity = velocity;
+        rb.velocity = new Vector3(
+            targetVelocity.x,
+            rb.velocity.y,
+            targetVelocity.z
+        );
     }
 
     bool IsGrounded()
