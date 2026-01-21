@@ -38643,15 +38643,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ff1077a90611048ac94a370ff1de98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  speed: 10
   jumpForce: 8
+  rotationSmooth: 10
   cameraTransform: {fileID: 194889041782766329}
-  mouseSensitivity: 150
-  userInventory: {fileID: 2842695748102780965}
+  hotbarUI: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  groundCheckDistance: 0.1
 --- !u!222 &7094981917136241474
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39321,8 +39320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 8891631679820524685}
   offset: {x: 0, y: 3, z: -5}
-  rotationSpeed: 5
-  followSpeed: 10
+  sensitivity: 3
 --- !u!1 &7745075715760005082
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,14 +2,9 @@ using UnityEngine;
 
 public class ThirdPersonCamera : MonoBehaviour
 {
-    public Transform target; // Player
+    public Transform target;
     public Vector3 offset = new Vector3(0, 3, -5);
-
-    public float mouseSensitivity = 3f;
-    public float followSpeed = 10f;
-
-    public float minY = -35f;
-    public float maxY = 60f;
+    public float sensitivity = 3f;
 
     private float rotX;
     private float rotY;
@@ -18,23 +13,15 @@ public class ThirdPersonCamera : MonoBehaviour
     {
         if (!target) return;
 
-        float mouseX = Input.GetAxisRaw("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * mouseSensitivity;
+        float mouseX = Input.GetAxisRaw("Mouse X") * sensitivity;
+        float mouseY = Input.GetAxisRaw("Mouse Y") * sensitivity;
 
         rotY += mouseX;
         rotX -= mouseY;
-        rotX = Mathf.Clamp(rotX, minY, maxY);
+        rotX = Mathf.Clamp(rotX, -35f, 60f);
 
-        Quaternion rotation = Quaternion.Euler(rotX, rotY, 0f);
-
-        Vector3 desiredPosition = target.position + rotation * offset;
-
-        transform.position = Vector3.Lerp(
-            transform.position,
-            desiredPosition,
-            followSpeed * Time.deltaTime
-        );
-
+        Quaternion rot = Quaternion.Euler(rotX, rotY, 0);
+        transform.position = target.position + rot * offset;
         transform.LookAt(target.position + Vector3.up * 1.5f);
     }
 }

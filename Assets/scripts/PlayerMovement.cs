@@ -5,20 +5,23 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float movementSpeed = 5f;
+    public float speed = 5f;
     public float jumpForce = 7f;
     public float rotationSmooth = 10f;
 
-    [Header("Camera Reference")]
-    public Transform cameraTransform; // Main Camera
+    [Header("Camera")]
+    public Transform cameraTransform;
+
+    [Header("UI")]
+    public GameObject hotbarUI;
 
     [Header("Ground Check")]
     public LayerMask groundLayer;
-    public float groundCheckDistance = 0.2f;
 
     private Rigidbody rb;
     private CapsuleCollider capsule;
     private Vector3 moveInput;
+    private bool uiOpen;
 
     void Start()
     {
@@ -28,40 +31,55 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
         rb.interpolation = RigidbodyInterpolation.Interpolate;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        SetCursor(true);
     }
 
     void Update()
     {
-        // Input
+        // HOTBAR AÇ / KAPA
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            uiOpen = !uiOpen;
+
+            if (hotbarUI)
+                hotbarUI.SetActive(uiOpen);
+
+            SetCursor(!uiOpen);
+        }
+
+        if (uiOpen)
+        {
+            moveInput = Vector3.zero;
+            return;
+        }
+
+        // INPUT
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        // Kameraya göre yön
         Vector3 camForward = cameraTransform.forward;
-        camForward.y = 0f;
+        camForward.y = 0;
         camForward.Normalize();
 
         Vector3 camRight = cameraTransform.right;
-        camRight.y = 0f;
+        camRight.y = 0;
         camRight.Normalize();
 
         moveInput = (camForward * v + camRight * h).normalized;
 
-        // Player kameraya doğru dönsün (SADECE YATAY)
+        // PLAYER DÖNÜŞÜ (kameraya göre)
         if (moveInput.magnitude > 0.1f)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(moveInput);
+            Quaternion targetRot = Quaternion.LookRotation(moveInput);
             transform.rotation = Quaternion.Slerp(
                 transform.rotation,
-                targetRotation,
+                targetRot,
                 rotationSmooth * Time.deltaTime
             );
         }
 
-        // Jump
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        // ZIPLAMA
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
@@ -69,18 +87,23 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 targetVelocity = moveInput * movementSpeed;
         rb.velocity = new Vector3(
-            targetVelocity.x,
+            moveInput.x * speed,
             rb.velocity.y,
-            targetVelocity.z
+            moveInput.z * speed
         );
     }
 
     bool IsGrounded()
     {
-        Vector3 origin = transform.position + Vector3.up * 0.1f;
-        float distance = capsule.bounds.extents.y + groundCheckDistance;
-        return Physics.Raycast(origin, Vector3.down, distance, groundLayer);
+        Vector3 pos = transform.position + Vector3.down * (capsule.height / 2f - 0.05f);
+        float radius = capsule.radius * 0.9f;
+        return Physics.CheckSphere(pos, radius, groundLayer);
+    }
+
+    void SetCursor(bool locked)
+    {
+        Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !locked;
     }
 }
