@@ -5,6 +5,7 @@ public class ThirdPersonCamera : MonoBehaviour
     public Transform target;
     public Vector3 offset = new Vector3(0, 3, -5);
     public float sensitivity = 3f;
+    public float followSpeed = 10f;
 
     private float rotX;
     private float rotY;

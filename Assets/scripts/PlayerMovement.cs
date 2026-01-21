@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
         rb.interpolation = RigidbodyInterpolation.Interpolate;
 
-        SetCursor(true);
+        // Mouse artık kilitlenmiyor → SetCursor kaldırıldı
     }
 
     void Update()
@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
             if (hotbarUI)
                 hotbarUI.SetActive(uiOpen);
 
-            SetCursor(!uiOpen);
+            // artık SetCursor(!uiOpen) yok, mouse hep serbest
         }
 
         if (uiOpen)
@@ -101,9 +101,5 @@ public class PlayerMovement : MonoBehaviour
         return Physics.CheckSphere(pos, radius, groundLayer);
     }
 
-    void SetCursor(bool locked)
-    {
-        Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
-        Cursor.visible = !locked;
-    }
+    // SetCursor fonksiyonu artık gereksiz → kaldırıldı
 }
