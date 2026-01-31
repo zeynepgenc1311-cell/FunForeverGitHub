@@ -8,6 +8,7 @@ public class SCItem : ScriptableObject
     public Sprite itemSprite;
     public bool canStackable;
     public int itemPrice = 1;
+    public CurrencyType costType;
 
     // Envantar ve world için:
     public GameObject itemPrefab;
