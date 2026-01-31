@@ -282,7 +282,7 @@ MonoBehaviour:
   slotIcon: {fileID: 8435528048630595894}
   priceText: {fileID: 2734708050062342213}
   slotButton: {fileID: 809407682409365652}
-  priceIcon: {fileID: 0}
+  priceIcon: {fileID: 1515739680587972102}
   currentItem: {fileID: 0}
 --- !u!1 &5392479100716506717
 GameObject:

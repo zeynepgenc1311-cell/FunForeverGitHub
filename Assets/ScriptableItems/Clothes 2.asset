@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d5cd5ff922f3b04fa43e95cf9319b0e, type: 3}
-  m_Name: Clothes
+  m_Name: Clothes 2
   m_EditorClassIdentifier: 
-  itemName: 
-  itemIcon: {fileID: 0}
-  itemSprite: {fileID: 0}
+  itemName: kemer
+  itemIcon: {fileID: 21300000, guid: 9fd8b1795527def439a073c55fb5d5c6, type: 3}
+  itemSprite: {fileID: 21300000, guid: 9fd8b1795527def439a073c55fb5d5c6, type: 3}
   canStackable: 0
-  itemPrice: 1
-  costType: 0
-  itemPrefab: {fileID: 0}
+  itemPrice: 200
+  costType: 1
+  itemPrefab: {fileID: 3094486209055602188, guid: f21eff5a0e83ddc4c8943c698c52dd24,
+    type: 3}
   damage: 0
